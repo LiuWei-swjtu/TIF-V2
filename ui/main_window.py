@@ -19,6 +19,7 @@ from config import (
     app_icon, APP_NAME, ORG_NAME,
     RASTER_EXTS, VECTOR_EXTS, ALL_EXTS
 )
+from colormap import CMAP_STORE
 from layer import LayerInfo, layer_read_bands
 from raster_reader import RasterReader
 from vector_item import VectorGraphicsItem
@@ -468,7 +469,6 @@ class TIFViewer(QMainWindow):
                 vmin = layer.vmins[0] if layer.vmins else 0
                 vmax = layer.vmaxs[0] if layer.vmaxs else 1
                 im.setImage(band_data, levels=[vmin, vmax], autoLevels=False)
-            from colormap import CMAP_STORE
             lut = CMAP_STORE.get(layer.colormap, layer.cmap_reverse)
             im.setLookupTable(lut)
         else:

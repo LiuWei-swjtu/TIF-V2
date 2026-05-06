@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 
 from PySide6.QtWidgets import (
-    QDialog, QVBoxLayout, QHBoxLayout, QFormLayout, QPushButton,
+    QDialog, QWidget, QVBoxLayout, QHBoxLayout, QFormLayout, QPushButton,
     QComboBox, QCheckBox, QDoubleSpinBox, QSpinBox, QLineEdit,
     QGroupBox, QLabel, QRadioButton, QButtonGroup, QScrollArea,
     QFileDialog, QMessageBox, QFontComboBox
